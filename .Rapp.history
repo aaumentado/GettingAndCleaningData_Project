@@ -1,0 +1,250 @@
+features_list
+names(X_training_data) <- features_list$feature
+features_list
+names(X_training_data)
+subset_X_training_data <- X_training_data[,mean_variable_colnames]
+head(subset_X_training_data)
+mean_variable_colnames
+subset_X_training_data <- X_training_data[,mean_variable_colnames]
+head(subset_X_training_data)
+head(X_training_data)
+subset_X_training_data <- X_training_data[,mean_variable_colnum]
+subset_X_training_data <- X_training_data[,mean_variable_colnums]
+ls()
+subset_X_training_data <- X_training_data[,mean_variables_colnum]
+head(subset_X_training_data)
+dim(subset_X_training_data)
+mean_variable_colnames
+mean_variable_colnames[1]
+subset_X_training_data <- X_training_data[,mean_variables_colnum[1]]
+head(subset_X_training_data)
+subset_X_training_data <- X_training_data[,mean_variables_colnum[1:3]]
+head(subset_X_training_data)
+subset_X_training_data <- X_training_data[,mean_variables_colnum[]]
+subset_X_training_data <- X_training_data[,mean_variables_colnum[]]
+head(subset_X_training_data)
+head(subset_X_training_data)
+dim(subset_X_training_data)
+subset_X_training_data <- X_training_data[,mean_variables_colnum]
+subset_X_training_data <- X_training_data[,mean_variables_colnum]
+dim(subset_X_training_data)
+head(subset_X_training_data)
+subset_X_training_data <- X_training_data[,mean_variable_colnames]
+head(subset_X_training_data)
+subset_X_training_data <- X_training_data[,mean_variable_colnames[]]
+head(subset_X_training_data)
+subset_X_training_data <- X_training_data[,mean_variable_colnames[1]]
+head(subset_X_training_data)
+class(mean_variable_colnames)
+subset_X_training_data <- X_training_data[,as.character(mean_variable_colnames)]
+head(subset_X_training_data)
+class(mean_variables_colnum)
+class(mean_variable_colnames)
+source(run_analysis.R)
+getwd()
+source("run_analysis.R")
+source("run_analysis.R")
+load_and_merge_datasets()
+source("run_analysis.R")
+x <- load_and_merge_datasets()
+x <- load_and_merge_datasets()
+source("run_analysis.R")
+x <- load_and_merge_datasets()
+source("run_analysis.R")
+x <- load_and_merge_datasets()
+source("run_analysis.R")
+x <- load_and_merge_datasets()
+source("run_analysis.R")
+x <- load_and_merge_datasets()
+source("run_analysis.R")
+x <- load_and_merge_datasets()
+source("run_analysis.R")
+x <- load_and_merge_datasets()
+x
+dim(x)
+names(x)
+head(x)
+library(plyr)
+?merge
+?plyr
+?arrange
+arrange(x, "subject.number")
+x$subject.number
+arrange(x, subject.number)
+range(x$subject.number)
+x2 <- arrange(x, subject.number)
+head(x2)
+x2 <- split(x, x$subject.number)
+dim(x2)
+x2
+summary(x2)
+x3 <- with(x2, tapply(x2,x2$activity,ave))
+x2$activity
+?with
+?tapply
+x2[1]
+head(X2)
+head(x2)
+class(x2)
+?ddply
+x3 <- with(x2, tapply(x2, activity, ave))
+x3 <- with(x2, tapply(x2, "activity", ave))
+x3 <- with(x2, tapply(x, "activity", ave))
+x3 <- with(x2, tapply(x, "activity", ave))
+data_by_subject <- with(x, split(x, subject.number))
+dim(data_by_subject)
+head(data_by_subject)
+str(data_by_subject)
+summary(data_by_subject)
+data_by_activity <- lapply(data_by_subject, split)
+data_by_activity <- lapply(data_by_subject, split, f=data_by_subject$activity)
+data_by_activity <- lapply(data_by_subject, split, f=activity)
+data_by_activity <- lapply(data_by_subject, split, f="activity")
+summary(data_by_activity)
+data_by_subject[[1]]
+head(data_by_subject[[1]])
+head(data_by_subject[[2]])
+with(data_by_subject, tapply(data_by_subject, "activity"))
+with(data_by_subject, tapply(data_by_subject[], "activity"))
+?tapply
+test <- tapply(data_by_subject, "activity",ave)
+test <- tapply(data_by_subject[[1]], "activity",ave)
+subject1 <- data_by_subject[[1]]
+class(subject1)
+test <- tapply(subject1, activity, ave)
+test <- tapply(subject1, "activity", ave)
+test <- tapply(subject1, subject1$activity, ave)
+test <- tapply(subject1, subject1$"activity", ave)
+length(subject1$activity)
+dim(subject1)
+test <- tapply(subject1, subject1$activity, ave)
+test <- tapply(subject1, subject1$activity, mean)
+?mean
+test <- tapply(subject1, subject1$activity, mean)
+test <- tapply(subject1[4], subject1$activity, mean)
+test <- tapply(activity, activity, mean)
+test <- tapply(activity.number, activity, mean)
+test <- tapply(activity.number, "activity", mean)
+test <- tapply("activity.number", "activity", mean)
+names(x)
+test <- tapply("tBodyAcc-mean()-X", "activity", mean)
+x[,4:69] <- as.numeric(x[,4:69])
+subject1[,4:69] <- as.numeric(subject1[,4:69])
+subject1
+?read.table
+?read.table
+source("run_analysis.R")
+master_data <- load_and_merge_datasets()
+mean(master_data[4])
+mean(master_data[[4]])
+mean(master_data[[1]])
+master_data_by_subject <- split(master_data, master_data$subject.number)
+master_data_by_subject1 <- split(master_data_by_subject[[1]], master_data_by_subject$activity)
+master_data_by_subject1 <- split(master_data_by_subject[[1]], master_data_by_subject1$activity)
+master_data_by_subject1 <- split(master_data_by_subject[[1]], master_data_by_subject[[1]]$activity)
+summary(master_data_by_subject1)
+?ddply
+test <- ddply(master_data, subject, activity, mean)
+test <- ddply(master_data, "subject", "activity", mean)
+test <- ddply(master_data, .(subject, activity), mean)
+test <- ddply(master_data, .(subject, activity), mean)
+?ddply
+test <- ddply(master_data, .(subject.number, activity), mean)
+test
+test <- ddply(master_data, .(subject.number, activity), ave)
+test
+?ddply
+test <- ddply(master_data, .(subject.number, activity), ave)
+head(test)
+warnings()
+class(master_data[[1]])
+class(master_data[[2]])
+class(master_data[[3]])
+class(master_data[[4]])
+class(master_data[[5]])
+test <- ddply(master_data, .(subject.number, activity), mean)
+warning()
+warnings()
+test <- ddply(master_data, .(subject.number, activity), mean)
+warnings()
+test
+?ave
+test <- ddply(master_data, .(subject.number), ave)
+test
+head(test)
+?ave
+ave(master_data, subject.number, activity)
+ave(master_data, "subject.number", activity)
+ave(master_data, "subject.number", "activity")
+test <- ave(master_data, "subject.number", "activity")
+head(test)
+test <- ave(master_data[,4:69], "subject.number", "activity")
+test <- ave(master_data[,4:69], "subject.number", "activity")
+source("run_analysis.R")
+data <- load_and_merge_datasets()
+class(data[[4]])
+mean(master_data[[4]])
+test <- ave(data, "subject.number","activity")
+test <- ave(data[[4]], "subject.number","activity")
+test
+head(test)
+test <- ave(data[[4:69]], "subject.number", "activity")
+test <- ddply(data[[4:69]], .("subject.number", "activity"), ave)
+test <- ddply(data[[4:69]], .("subject.number", "activity"), ave)
+test <- ddply(data[[4:69]], .("subject.number", "activity"), mean)
+test <- ddply(data[,4:69], .("subject.number", "activity"), mean)
+?group_by
+??group_by
+dcast
+?ddply
+?dcast
+??dcast
+library(reshape2)
+melt_data <- melt(data, id = c("subject.number","activity","activity.number", measure.vars))
+melt_data <- melt(data, id = c("subject.number","activity","activity.number"), measure.vars=names(data[,4:69])))
+melt_data <- melt(data, id = c("subject.number","activity","activity.number"), measure.vars=names(data[,4:69]))
+head(melt_data)
+tidyData <- dcast(melt_data, subject ~ variable, mean)
+tidyData <- dcast(melt_data, "subject" ~ variable, mean)
+head(tidyData)
+tidyData
+tidyData[1,]
+tidyData[2,]
+tidyData[3,]
+melt_data
+head(melt_data)
+tidyData <- dcast(melt_data, c("subject", "activity") ~ variables)
+tidyData <- dcast(melt_data, c("subject", "activity") ~ variable, mean)
+head(tidyData)
+library(dplyr)
+install.packages("dplyr")
+?numColwise
+?numcolwise
+?aggregrate
+??aggregate
+head(data)
+head(data[[1:5]])
+head(data[,1:5])
+test <- aggregate(data, c("subject.number","activity"))
+test <- aggregate(data, c("subject.number","activity"),mean)
+test <- aggregate(data, list("subject.number","activity"),mean)
+test <- aggregate(data, list("subject.number"),mean)
+test <- aggregate(data, as.list("subject.number"),mean)
+test <- ddply(data, .(subject.number), numcolwise(mean)
+)
+test
+test <- ddply(data, .(subject.number, activity), numcolwise(mean))
+test
+head(test)
+head(test,10)
+source(run_analysis.R)
+source("run_analysis.R")
+tidy_dataset <- run_UCI_HAR_analysis()
+summary(tidy_dataset)
+str(tidy_dataset)
+?read.csv
+write.csv(data, file="raw_HAR_data.csv")
+dir()
+write.csv(tidy_data, file="raw_HAR_data.csv")
+write.csv(tidy_dataset, file="tidy_HAR_data.csv")
+getwd()
