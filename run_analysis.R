@@ -13,8 +13,6 @@ run_UCI_HAR_analysis <- function() {
 	return(tidy_data)
 }
 
-
-
 ## this function takes the UCI
 ## HAR training and test datasets
 ## and merges into one single dataset

@@ -1,250 +1,250 @@
-features_list
-names(X_training_data) <- features_list$feature
-features_list
-names(X_training_data)
-subset_X_training_data <- X_training_data[,mean_variable_colnames]
-head(subset_X_training_data)
-mean_variable_colnames
-subset_X_training_data <- X_training_data[,mean_variable_colnames]
-head(subset_X_training_data)
-head(X_training_data)
-subset_X_training_data <- X_training_data[,mean_variable_colnum]
-subset_X_training_data <- X_training_data[,mean_variable_colnums]
-ls()
-subset_X_training_data <- X_training_data[,mean_variables_colnum]
-head(subset_X_training_data)
-dim(subset_X_training_data)
-mean_variable_colnames
-mean_variable_colnames[1]
-subset_X_training_data <- X_training_data[,mean_variables_colnum[1]]
-head(subset_X_training_data)
-subset_X_training_data <- X_training_data[,mean_variables_colnum[1:3]]
-head(subset_X_training_data)
-subset_X_training_data <- X_training_data[,mean_variables_colnum[]]
-subset_X_training_data <- X_training_data[,mean_variables_colnum[]]
-head(subset_X_training_data)
-head(subset_X_training_data)
-dim(subset_X_training_data)
-subset_X_training_data <- X_training_data[,mean_variables_colnum]
-subset_X_training_data <- X_training_data[,mean_variables_colnum]
-dim(subset_X_training_data)
-head(subset_X_training_data)
-subset_X_training_data <- X_training_data[,mean_variable_colnames]
-head(subset_X_training_data)
-subset_X_training_data <- X_training_data[,mean_variable_colnames[]]
-head(subset_X_training_data)
-subset_X_training_data <- X_training_data[,mean_variable_colnames[1]]
-head(subset_X_training_data)
-class(mean_variable_colnames)
-subset_X_training_data <- X_training_data[,as.character(mean_variable_colnames)]
-head(subset_X_training_data)
-class(mean_variables_colnum)
-class(mean_variable_colnames)
-source(run_analysis.R)
+library(swirl)
+swirl()
+num_vect <- c(0.5, 55, -10, 6)
+num_vect < 1
+tf <- num_vect < 1
+tf
+num_vect >= 6
+my_char <- c("My", "name", "is")
+my_char
+past(my_char, collapse = " ")
+paste(my_char, collapse = " ")
+my_name <- c(my_char, "Albert")
+my_name
+paste(my_name, collapse = " ")
+paste("Hello", "world!", sep = " )
+paste("Hello", "world!", sep = " ")
 getwd()
+exit
+exit()
+quit()
+install.packages("RMySQL", type = 'source')
+Sys.getenv('MYSQL_HOME')
+install.packages("RMySQL", type = 'source')
+quit()
+install.packages("RMySQL")
+Sys.setenv(MYSQL_HOME)
+RHome()
+R.Home()
+R_home()
+R_Home()
+R_HOME()
+R.HOME()
+?Startup
+Sys.getenv("MYSQL_HOME")
+install.packages("RMySQL")
+library()
+library(RMySQL)
+ucscDb <- dbConnect(MySQL(), user="genome", host="genome-mysql.cse.ucsc.edu")
+result <- dbGetQuery(ucscDb, "show database;"); dbDisconnect(ucscDb)
+result <- dbGetQuery(ucscDb, "show databases;"); dbDisconnect(ucscDb)
+result
+hg19 <- dbConnect(MySQL(), user="genome", db="hg19", host="genome-mysql.cse.ucsc.edu")
+allTables <- dbListTables(hg19)
+length(allTables)
+allTables[1:5]
+dbListFields(hg19, "affyU133Plus2")
+allTables
+head(allTables)
+dbListFields(hg19, "affyU133Plus2")
+dbGetQuery(hg19, "select count(*) from affyU133Plus2")
+dbGetQuery(hg19, "select bin from affyU133Plus2")
+dbGetQuery(hg19, "select count(*) from affyU133Plus2")
+affyData <- dbReadTable(hg19, "affyU133Plus2")
+head(affyData)
+query <- dbSendQuery(hg19, "select * from affyU133Plus2 where misMatches between 1 and 3")
+affyMis <- fetch(query); quantile(affyMis$misMatches)
+affyMisSmall <- fetch(query, n=10); dbClearResult(query)
+dim(affyMisSmall)
+head(affyMisSmall)
+dbDisconnect(hg19)
+source("http://bioconductor.org/biocLite.R")
+biocLite("rhdf5")
+library(rhdf5)
+created = h5createFile("example.h5")
+dir()
+created
+created = h5createGroup("example.h5", "foo")
+created = h5createGroup("example.h5", "baa")
+created = h5createGroup("example.h5", "foo/foobaa")
+h5ls("example.h5")
+A = matrix(1:10, nr=5, nc=2)
+h5write(A, "example.h5", "foo/A")
+h5ls("example.h5")
+B = array(seq(0.1, 2.0, by=0.1), dim=c(5,2,2))
+B
+?attr
+attr(B, "scale") <- "liter"
+attr(B, "scale")
+h5write(B, "example.h5","foo/foobaa/B")
+h5ls("example.h5")
+B
+df = data.frame(1L:5L, seq(0,1,length.out=5), c("ab","cde","fghi","a","s"), stringsAsFactors=FALSE)
+h5write(df, "example.h5","df")
+h5ls("example.h5")
+readA = h5read("example.h5", "foo/A")
+readA
+readB = h5read("example.h5", "foo/foobaa/B")
+readdf = h5read("example.h5","df")
+readdf
+h5write(c(12,13,14),"example.h5","foo/A",index=list(1:3,1))
+h5read("example.h5","foo/A")
+h5read("example.h5","foo/A", index=list(1:3,1))
+con = url("http://scholar.google.com/citations?user=HI-I6C0AAAAJ&hl=en")
+htmlCode = readLines(con)
+close(con)
+htmlCode
+url <- "http://scholar.google.com/citations?user=HI-I6C0AAAAJ&hl=en"
+library(XML)
+html <- htmlTreeParse(url, useInternalNodes=T)
+xpathSApply(html, "//title", xmlValue)
+xpathSApply(html, "//td[@='col-citedby']", xmlValue)
+xpathSApply(html, "//td[@id='col-citedby']", xmlValue)
+html
+?XML
+??XML
+rootNode <- xmlRoot(html)
+rootNode
+html[1]
+html[[1]]
+rootNode[[1]]
+library(httr); html2 = GET(url)
+content2 = content(html2, as="text")
+parsedHtml = htmlParse(content2, asText=T)
+xpathSApply(parsedHtml, "//title", xmlValue)
+parsedHtml
+pg1 = GET("http://httpbin.org/basic-auth/user/passwd")
+pg1
+pg2 = GET("http://httpbin.org/basic-auth/user/passwd", authenticate("user","passwd"))
+pg2
+names(pg2)
+content(pg2)
+google = handle("http://google.com")
+pg1 = GET(handle=google,path="/")
+quite
+quit()
+library(httr)
+library(httpuv)
+demo()
+demo(oauth2-github)
+demo("oauth2-github")
+??oauth_endpoint
+demo("oauth2-github")
+demo("oauth2-github", package="httr", ask=FALSE)
+demo("oauth2-github",package="httr",ask=F)
+?stop_for_status
+req <- GET("https://api.github.com/rate_limit", gtoken)
+req
+github_token
+myapp
+gtoken
+?require
+require("httr")
+httr
+require(httr)
+httr
+library()
+?oauth_endpoints
+demo("oauth2-github")
+oauth_endpoints("github")
+oauth_app("github", "a8ef59bf6c346ba0b29e")
+myapp <- oauth_app("github", "a8ef59bf6c346ba0b29e")
+github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
+oauth_app("github", "a8ef59bf6c346ba0b29e", "ad615f1a8752f1dab07e7f9b9f5c243f12176dc6")
+github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
+library(httr)
+library(httpuv)
+github <- oauth_endpoints("github")
+github
+myapp <- oauth_app("github",key="a8ef59bf6c346ba0b29e", secret="ad615f1a8752f1dab07e7f9b9f5c243f12176dc6")
+github_token <- oauth2.0_token(github, myapp)
+myapp <- oauth_app("github",key="a8ef59bf6c346ba0b29e")
+github_token <- oauth2.0_token(github, myapp)
+oauth_app("github", "a8ef59bf6c346ba0b29e", "ad615f1a8752f1dab07e7f9b9f5c243f12176dc6")
+?oauth_app
+github_token <- oauth1.0_token(github, myapp)
+?oauth1.0_token
+github_token <- oauth2.0_token(github, myapp)
+install.packages("httr","httpuv")
+install.packages("httr")
+install.packages("httpuv")
+library(httr)
+library(httpuv)
+github <- oauth_endpoint("github")
+?oauth_endpoint
+github <- oauth_endpoints("github")
+githuv
+github
+myapp <- oauth_app("github", key = "fa961a2ca9ec8dacbd96", secret = "858b0026cc0e159bd9494cdbd51481a82a632180")
+myapp
+gtoken <- oauth2.0_token(github, myapp)
+library(httr)
+library(httpuv)
+github <- oauth_endpoints("github")
+myapp <- oauth_app("github", key="fa961a2ca9ec8dacbd96", secret="858b0026cc0e159bd9494cdbd51481a82a632180")
+github_token <- oauth2.0_token(github, myapp)
+myapp <- oauth_app("github","fa961a2ca9ec8dacbd96","858b0026cc0e159bd9494cdbd51481a82a632180")
+github_token <- oauth2.0_token(github, myapp)
+myapp <- oauth_app("github","fa961a2ca9ec8dacbd96","b946f42c7ef25f93c9ebd7fca5900cd72e499fa9")
+github_token <- oauth2.0_token(github, myapp)
+req <- GET("https://api.github.com/users/jtleek/repos")
+req
+library(jsonlite)
+??jsonlite
+content(req)
+con <- "https://api.github.com/users/jtleek/repos"
+close("https://api.github.com/users/jtleek/repos)
+close("https://api.github.com/users/jtleek/repos")
+??close
+github_json1 <- GET(con)
+github_json1
+github_json2 <- jsonlite::fromJSON(toJSON(github_json1))
+github_json1 <- re
+github_json1 <- req
+github_json2 <- jsonlite::fromJSON(toJSON(github_json1))
+library(jsonlite)
+github_json2 <- jsonlite::fromJSON(toJSON(github_json1))
+github_json1
+github_json1 <- content(req)
+github_json2 <- jsonlite::fromJSON(toJSON(github_json1))
+head(github_json2)
+names(github_json2)
+grep("datasharing repo", github_json2[,9])
+github_json2[,9]
+names(github_json2)
+github_json2[5,c(3,9,45)]
+?GET
+install.packages("sqldf")
+library(sqldf)
+library()
+library(tcltk)
+?tcltk
+??tcltk
+library(tcltk)
+library(sqldf)
+install.package("tcltk")
+install.packages("tcltk")
+library(tcltk)
+setwd("/Users/albertaumentado/Documents/Coursera/Data Science/Getting and Cleaning Data/GettingAndCleaningData_Project")
 source("run_analysis.R")
-source("run_analysis.R")
-load_and_merge_datasets()
-source("run_analysis.R")
-x <- load_and_merge_datasets()
-x <- load_and_merge_datasets()
-source("run_analysis.R")
-x <- load_and_merge_datasets()
-source("run_analysis.R")
-x <- load_and_merge_datasets()
-source("run_analysis.R")
-x <- load_and_merge_datasets()
-source("run_analysis.R")
-x <- load_and_merge_datasets()
-source("run_analysis.R")
-x <- load_and_merge_datasets()
-source("run_analysis.R")
-x <- load_and_merge_datasets()
-x
-dim(x)
-names(x)
-head(x)
-library(plyr)
-?merge
-?plyr
-?arrange
-arrange(x, "subject.number")
-x$subject.number
-arrange(x, subject.number)
-range(x$subject.number)
-x2 <- arrange(x, subject.number)
-head(x2)
-x2 <- split(x, x$subject.number)
-dim(x2)
-x2
-summary(x2)
-x3 <- with(x2, tapply(x2,x2$activity,ave))
-x2$activity
-?with
-?tapply
-x2[1]
-head(X2)
-head(x2)
-class(x2)
-?ddply
-x3 <- with(x2, tapply(x2, activity, ave))
-x3 <- with(x2, tapply(x2, "activity", ave))
-x3 <- with(x2, tapply(x, "activity", ave))
-x3 <- with(x2, tapply(x, "activity", ave))
-data_by_subject <- with(x, split(x, subject.number))
-dim(data_by_subject)
-head(data_by_subject)
-str(data_by_subject)
-summary(data_by_subject)
-data_by_activity <- lapply(data_by_subject, split)
-data_by_activity <- lapply(data_by_subject, split, f=data_by_subject$activity)
-data_by_activity <- lapply(data_by_subject, split, f=activity)
-data_by_activity <- lapply(data_by_subject, split, f="activity")
-summary(data_by_activity)
-data_by_subject[[1]]
-head(data_by_subject[[1]])
-head(data_by_subject[[2]])
-with(data_by_subject, tapply(data_by_subject, "activity"))
-with(data_by_subject, tapply(data_by_subject[], "activity"))
-?tapply
-test <- tapply(data_by_subject, "activity",ave)
-test <- tapply(data_by_subject[[1]], "activity",ave)
-subject1 <- data_by_subject[[1]]
-class(subject1)
-test <- tapply(subject1, activity, ave)
-test <- tapply(subject1, "activity", ave)
-test <- tapply(subject1, subject1$activity, ave)
-test <- tapply(subject1, subject1$"activity", ave)
-length(subject1$activity)
-dim(subject1)
-test <- tapply(subject1, subject1$activity, ave)
-test <- tapply(subject1, subject1$activity, mean)
-?mean
-test <- tapply(subject1, subject1$activity, mean)
-test <- tapply(subject1[4], subject1$activity, mean)
-test <- tapply(activity, activity, mean)
-test <- tapply(activity.number, activity, mean)
-test <- tapply(activity.number, "activity", mean)
-test <- tapply("activity.number", "activity", mean)
-names(x)
-test <- tapply("tBodyAcc-mean()-X", "activity", mean)
-x[,4:69] <- as.numeric(x[,4:69])
-subject1[,4:69] <- as.numeric(subject1[,4:69])
-subject1
-?read.table
-?read.table
-source("run_analysis.R")
-master_data <- load_and_merge_datasets()
-mean(master_data[4])
-mean(master_data[[4]])
-mean(master_data[[1]])
-master_data_by_subject <- split(master_data, master_data$subject.number)
-master_data_by_subject1 <- split(master_data_by_subject[[1]], master_data_by_subject$activity)
-master_data_by_subject1 <- split(master_data_by_subject[[1]], master_data_by_subject1$activity)
-master_data_by_subject1 <- split(master_data_by_subject[[1]], master_data_by_subject[[1]]$activity)
-summary(master_data_by_subject1)
-?ddply
-test <- ddply(master_data, subject, activity, mean)
-test <- ddply(master_data, "subject", "activity", mean)
-test <- ddply(master_data, .(subject, activity), mean)
-test <- ddply(master_data, .(subject, activity), mean)
-?ddply
-test <- ddply(master_data, .(subject.number, activity), mean)
-test
-test <- ddply(master_data, .(subject.number, activity), ave)
-test
-?ddply
-test <- ddply(master_data, .(subject.number, activity), ave)
-head(test)
-warnings()
-class(master_data[[1]])
-class(master_data[[2]])
-class(master_data[[3]])
-class(master_data[[4]])
-class(master_data[[5]])
-test <- ddply(master_data, .(subject.number, activity), mean)
-warning()
-warnings()
-test <- ddply(master_data, .(subject.number, activity), mean)
-warnings()
-test
-?ave
-test <- ddply(master_data, .(subject.number), ave)
-test
-head(test)
-?ave
-ave(master_data, subject.number, activity)
-ave(master_data, "subject.number", activity)
-ave(master_data, "subject.number", "activity")
-test <- ave(master_data, "subject.number", "activity")
-head(test)
-test <- ave(master_data[,4:69], "subject.number", "activity")
-test <- ave(master_data[,4:69], "subject.number", "activity")
-source("run_analysis.R")
-data <- load_and_merge_datasets()
-class(data[[4]])
-mean(master_data[[4]])
-test <- ave(data, "subject.number","activity")
-test <- ave(data[[4]], "subject.number","activity")
-test
-head(test)
-test <- ave(data[[4:69]], "subject.number", "activity")
-test <- ddply(data[[4:69]], .("subject.number", "activity"), ave)
-test <- ddply(data[[4:69]], .("subject.number", "activity"), ave)
-test <- ddply(data[[4:69]], .("subject.number", "activity"), mean)
-test <- ddply(data[,4:69], .("subject.number", "activity"), mean)
-?group_by
-??group_by
-dcast
-?ddply
-?dcast
-??dcast
-library(reshape2)
-melt_data <- melt(data, id = c("subject.number","activity","activity.number", measure.vars))
-melt_data <- melt(data, id = c("subject.number","activity","activity.number"), measure.vars=names(data[,4:69])))
-melt_data <- melt(data, id = c("subject.number","activity","activity.number"), measure.vars=names(data[,4:69]))
-head(melt_data)
-tidyData <- dcast(melt_data, subject ~ variable, mean)
-tidyData <- dcast(melt_data, "subject" ~ variable, mean)
-head(tidyData)
-tidyData
-tidyData[1,]
-tidyData[2,]
-tidyData[3,]
-melt_data
-head(melt_data)
-tidyData <- dcast(melt_data, c("subject", "activity") ~ variables)
-tidyData <- dcast(melt_data, c("subject", "activity") ~ variable, mean)
-head(tidyData)
-library(dplyr)
-install.packages("dplyr")
-?numColwise
-?numcolwise
-?aggregrate
-??aggregate
-head(data)
-head(data[[1:5]])
-head(data[,1:5])
-test <- aggregate(data, c("subject.number","activity"))
-test <- aggregate(data, c("subject.number","activity"),mean)
-test <- aggregate(data, list("subject.number","activity"),mean)
-test <- aggregate(data, list("subject.number"),mean)
-test <- aggregate(data, as.list("subject.number"),mean)
-test <- ddply(data, .(subject.number), numcolwise(mean)
-)
-test
-test <- ddply(data, .(subject.number, activity), numcolwise(mean))
-test
-head(test)
-head(test,10)
-source(run_analysis.R)
-source("run_analysis.R")
+tidy_dataset <- run_HAR_analysis()
+ls()
 tidy_dataset <- run_UCI_HAR_analysis()
+dir()
+write.table(tidy_dataset, file="tidy_HAR_data.txt", row.names=F)
+head(tidy_dataset)
+arrange(tidy_dataset, activity)
+head(arrange(tidy_dataset, activity))
+head(arrange(tidy_dataset, c(subject.number,activity))
+_
+head(arrange(tidy_dataset, c(subject.number,activity)))
 summary(tidy_dataset)
 str(tidy_dataset)
-?read.csv
-write.csv(data, file="raw_HAR_data.csv")
-dir()
-write.csv(tidy_data, file="raw_HAR_data.csv")
-write.csv(tidy_dataset, file="tidy_HAR_data.csv")
-getwd()
+?arrange
+library(plyr)
+test <- arrange(tidy_data, subject.number, activity)
+test <- arrange(tidy_dataset, subject.number, activity)
+head(test,10)
+test <- arrange(tidy_data, subject.number, activity.number)
+test <- arrange(tidy_dataset, subject.number, activity.number)
+head(test,10)
