@@ -14,6 +14,8 @@ This is a 2 column white space delimited file
 The first column is the activity key (integer 1 through 6)
 The second column is the activity name
 
+### Explanation of functions used
+* load_and_merge_datasets()
 the load_and_merge_datasets() function will first load the feature and activity names and use them to generate the activity names and feature variable names
 
 Note that the feature variable names in the final dataset are the exact literal feature names in features.txt and are therefore liberal
@@ -29,8 +31,11 @@ Initial merging is a cbind of the subject data "subject.id", activity data "acti
 
 To apply labels, we use the merge function to combine the activity names by activity number to the merge_*_data
 
-A final merge of the test and training data is achieved via rbind because of the identical column structure and the outputted set is master_dataset
+A final merge of the test and training data is achieved via rbind because of the identical column structure to generate "master_dataset"
 
-The master_dataset is then further subsetted by using the grep function to dfind all mean() and std() columns as defined by the feature_info.txt file
+The master_dataset is then further subsetted by using the grep function to dfind all mean() and std() columns as defined by the feature_info.txt file and this is the final return output of the load and merge function
 
-This subsetted master_dataset is fed to the tidy_HAR_dataset) function and a final resulting tidy_dataset is outputted that contains the mean of each variable grouped by subject and then by activity
+
+*tidy_HAR(dataset) function
+
+The subsetted master_dataset from the load and merge operation is fed to thetidy_HAR(dataset) function and a final resulting tidy_dataset is outputted that contains the mean of each variable grouped by subject and then by activity
