@@ -25,4 +25,12 @@ subject_*_data: the subject id number associated to a feature vector measurement
 y_*_data: the activity key number associated to a feature vector measurement
 X_*_data: the 561 valued feature vector containing HAR data
 
-Initial merging is a cbind of the subject data "subject.id", activity data "activity.number", and the actual feature vector data
+Initial merging is a cbind of the subject data "subject.id", activity data "activity.number", and the actual feature vector data and outputs a merged data set merge_*_data
+
+To apply labels, we use the merge function to combine the activity names by activity number to the merge_*_data
+
+A final merge of the test and training data is achieved via rbind because of the identical column structure and the outputted set is master_dataset
+
+The master_dataset is then further subsetted by using the grep function to dfind all mean() and std() columns as defined by the feature_info.txt file
+
+This subsetted master_dataset is fed to the tidy_HAR_dataset) function and a final resulting tidy_dataset is outputted that contains the mean of each variable grouped by subject and then by activity
