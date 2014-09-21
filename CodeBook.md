@@ -39,8 +39,8 @@ The master_dataset is then further subsetted by using the grep function to dfind
 
 * tidy_HAR(dataset) function
 
-The subsetted master_dataset from the load and merge operation is fed to thetidy_HAR(dataset) function and a final resulting tidy_dataset is outputted that contains the mean of each variable grouped by subject and then by activity
+The subsetted master_dataset from the load and merge operation is fed to thetidy_HAR(dataset) function and a final resulting tidy_dataset is outputted that contains the mean of each variable grouped by subject and then by activity. It makes use of the plyr function and ddply to perform mean over each column grouped by the subject and activity.
 
 * run_UCI_HAR_analysis() function
 
-This is a wrapper function to execute both the load extract and transform functions on the data
+This is a wrapper function to execute both the load extract and transform functions on the data.
